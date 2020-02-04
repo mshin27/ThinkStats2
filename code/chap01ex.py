@@ -19,6 +19,11 @@ def main(script):
 
     script: string script name
     """
+    preg = nsfg.ReadFemPreg()
+    pregnum = preg["caseid"].value_counts().sort_index()
+
+
+    print(pregnum)
     print('%s: All tests passed.' % script)
 
 
